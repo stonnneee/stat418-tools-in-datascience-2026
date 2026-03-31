@@ -218,11 +218,16 @@ Cline can:
 ### Model Selection
 
 In Cline settings, you can choose different models:
-- **anthropic/claude-3.5-sonnet** (recommended, most capable)
-- **google/gemini-2.0-flash-exp:free** (fast, completely free)
-- **meta-llama/llama-3.2-3b-instruct:free** (smaller, free)
 
-Free models are sufficient for most tasks in this course.
+**Paid (Best Quality)**:
+- **anthropic/claude-3.5-sonnet** - Most capable, but requires credits
+
+**Free (Recommended for Course)**:
+- **meta-llama/llama-3.3-70b-instruct:free** - Best overall free choice
+- **nvidia/nemotron-3-super-120b-a12b:free** - Excellent for coding (tested working)
+- **nousresearch/hermes-3-llama-3.1-405b:free** - Most capable free model
+
+Free models are sufficient for all tasks in this course. Start with Llama 3.3 or Nvidia Nemotron.
 
 ## Practice Exercises
 

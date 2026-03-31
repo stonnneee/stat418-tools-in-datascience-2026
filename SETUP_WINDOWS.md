@@ -253,22 +253,6 @@ uv pip install -e ".[llm]"
 uv pip install -e ".[web]"
 ```
 
-### Step 4: Create Your Assignment Branch
-
-For each assignment, you'll create a new branch:
-
-```bash
-# Example for homework 1
-git checkout -b hw1-yourname
-
-# Do your work, then commit and push
-git add .
-git commit -m "Complete homework 1"
-git push origin hw1-yourname
-
-# Then create a Pull Request on GitHub to submit
-```
-
 ---
 
 ## 7. Verification Test
