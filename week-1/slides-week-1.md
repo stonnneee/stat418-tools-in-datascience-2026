@@ -62,6 +62,27 @@ This course embraces AI assistants while building deep understanding of what we'
 **Speaker Notes:**
 Some people worry AI makes learning to code obsolete. That's not true, but it does change what we need to learn and how we learn it. AI assistants free you from memorizing syntax so you can focus on architecture, logic, and problem-solving. We'll learn to use AI effectively while building the fundamentals that let you understand and improve what AI generates. You'll learn how to prompt effectively and how to evaluate generated code.
 
+## The Journey vs. The Destination
+
+**Terence Tao on AI and Problem-Solving**
+
+> "These problems are like distant locations that you would hike to. And in the past, you would have to go on a journey. You can lay down trail markers that other people could follow, and you could make maps.
+> 
+> AI tools are like taking a helicopter to drop you off at the site. You miss all the benefits of the journey itself. You just get right to the destination, which actually was only just a part of the value of solving these problems."
+> 
+> — Terence Tao, Fields Medalist
+
+**The Lesson for Data Science:**
+- **Understanding the journey** is as important as reaching the destination
+- **Building fundamentals** lets you navigate when AI can't help
+- **AI accelerates**, but doesn't replace the learning process
+- **We'll use AI as a tool**, not a crutch
+
+**Speaker Notes:**
+This quote from Terence Tao, one of the world's greatest mathematicians, perfectly captures our philosophy. AI tools are incredibly powerful, but if you only use them to get answers without understanding the process, you miss the real learning. In this course, we'll use AI to accelerate your work, but we'll also make sure you understand what's happening under the hood. The goal is to make you a better data scientist, not just someone who can prompt AI effectively.
+
+---
+
 ---
 
 ## Part 1: Version Control with Git

@@ -18,6 +18,8 @@ See [STUDENT_SETUP.md](../STUDENT_SETUP.md)
 
 ### Readings
 
+[The World's Best Mathematician on the Arrival of AI](https://www.theatlantic.com/technology/2026/02/ai-math-terrance-tao/686107/) - Terence Tao interview on AI's impact on mathematics and problem-solving
+
 [Is Data Scientist Still the Sexiest Job of the 21st Century?](https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century)
 
 [Elements and Principles of Data Analysis](https://arxiv.org/pdf/1903.07639v1.pdf) - Stephanie Hicks and Roger Peng
