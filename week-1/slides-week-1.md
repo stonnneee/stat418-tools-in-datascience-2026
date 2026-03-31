@@ -531,9 +531,9 @@ You need to set up your complete development environment before we can start han
 7. **Configure Cline** - Connect to OpenRouter
 
 **Detailed Instructions:**
-- **STUDENT_SETUP.md** has step-by-step instructions
-- Separate sections for Mac and Windows
-- Troubleshooting guide for common issues
+- **STUDENT_SETUP.md** directs you to OS-specific guides
+- **SETUP_MAC.md** - Complete macOS setup guide
+- **SETUP_WINDOWS.md** - Complete Windows setup guide
 - Test procedures to verify everything works
 
 **Don't Wait Until Last Minute:**
