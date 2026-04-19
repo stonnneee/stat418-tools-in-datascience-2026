@@ -1,8 +1,9 @@
 # Assignment 2: Movie Data Collection & Analysis Pipeline
 
-**Due:** Two weeks from Week 4 class (before Week 6 class at 6:00 PM)
+**Due:** Before Week 5 class at 6:00 PM 
 
 **Submission:** Pull request to the course repository
+
 
 ## Overview
 
@@ -10,7 +11,7 @@ Build a data collection pipeline that combines API integration and web scraping 
 
 ## Assignment Description
 
-Collect data for **at least 100 movies or TV shows** including:
+Collect data for **at least 50 movies or TV shows** including:
 
 **From TMDB API:**
 - Title, release date, runtime
@@ -24,7 +25,6 @@ Collect data for **at least 100 movies or TV shows** including:
 **From IMDb (via scraping):**
 - IMDb rating
 - Number of user reviews
-- Top user review excerpts
 - Metascore (if available)
 
 ## Requirements
@@ -46,20 +46,19 @@ Create `api_collector.py` that:
 def get_popular_movies(page: int = 1) -> List[Dict]
 def get_movie_details(movie_id: int) -> Dict
 def get_movie_credits(movie_id: int) -> Dict
-def collect_all_data(num_items: int = 100) -> List[Dict]
+def collect_all_data(num_items: int = 50) -> List[Dict]
 ```
 
 ### Part 2: Web Scraping
 
 Create `web_scraper.py` that:
 1. Checks IMDb's robots.txt
-2. Scrapes movie pages for ratings and reviews
+2. Scrapes movie pages for ratings and review counts
 3. Implements rate limiting (minimum 2 seconds between requests)
 4. Uses appropriate User-Agent header
 5. Handles missing data gracefully
-6. Extracts structured data from HTML
-7. Saves scraped data to JSON files
-8. Logs all scraping activity
+6. Saves scraped data to JSON files
+7. Logs all scraping activity
 
 **Key Functions:**
 ```python
@@ -68,6 +67,8 @@ def scrape_movie_page(imdb_id: str) -> Dict
 def scrape_multiple_movies(imdb_ids: List[str]) -> List[Dict]
 ```
 
+**Note:** Focus on getting basic ratings and counts. Don't worry about extracting review text for this assignment.
+
 ### Part 3: Data Processing
 
 Create `data_processor.py` that:
@@ -75,10 +76,9 @@ Create `data_processor.py` that:
 2. Merges data on common identifiers (IMDb ID)
 3. Cleans and validates data
 4. Handles missing values appropriately
-5. Standardizes formats (dates, currencies, ratings)
+5. Standardizes formats (dates, ratings)
 6. Removes duplicates
-7. Adds derived fields (e.g., profit = revenue - budget)
-8. Saves processed data in multiple formats (JSON, CSV, Parquet)
+7. Saves processed data as CSV and JSON
 
 **Key Functions:**
 ```python
@@ -90,33 +90,25 @@ def save_processed_data(df: pd.DataFrame, output_dir: str)
 
 ### Part 4: Analysis
 
-Create `analyze_data.py` that answers:
+Create `analyze_data.py` that answers **at least 3 of the following**:
 
 1. **Rating Analysis:**
    - What's the correlation between TMDB and IMDb ratings?
-   - Which platform tends to rate higher?
    - Distribution of ratings on each platform
 
 2. **Genre Analysis:**
    - Most common genres
    - Average ratings by genre
-   - Most profitable genres
 
-3. **Financial Analysis:**
+3. **Financial Analysis (if collecting movies):**
    - Budget vs revenue correlation
    - Most profitable movies
-   - Average ROI by genre
 
 4. **Temporal Analysis:**
    - Rating trends over time
-   - Budget trends over time
    - Most productive years
 
-5. **Cast/Crew Analysis:**
-   - Most frequent actors/directors
-   - Average ratings for top actors/directors
-
-Generate visualizations and a summary report.
+Generate **at least 3 visualizations** and a summary report.
 
 ### Part 5: Documentation
 
@@ -188,6 +180,8 @@ Install with uv:
 uv pip install -r requirements.txt
 ```
 
+**Tip:** Start with the API collector first (easier), then add web scraping, then analysis. Test each part before moving to the next.
+
 ## Setup Instructions
 
 ### 1. Get TMDB API Key
@@ -249,13 +243,12 @@ TMDB_API_KEY=your_tmdb_api_key_here
    - Commit frequently with meaningful messages
 
 4. **Required files:**
-   - All Python scripts (api_collector.py, web_scraper.py, etc.)
+   - All Python scripts (api_collector.py, web_scraper.py, data_processor.py, analyze_data.py)
    - README.md with setup instructions
-   - REPORT.md with findings and visualizations
+   - REPORT.md with findings and at least 3 visualizations
    - requirements.txt
    - .env.example (template for API keys)
-   - Sample processed data (small subset in data/processed/)
-   - At least 3 visualizations in REPORT.md
+   - Sample processed data (CSV file with your 50+ items in data/processed/)
 
 5. **Do NOT include:**
    - .env file (contains your API key!)
@@ -410,17 +403,3 @@ class IMDbScraper:
 - [Matplotlib Gallery](https://matplotlib.org/stable/gallery/index.html)
 - [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
 
-### Course Materials
-- Week 4 examples: `api-basics`, `web-scraping-basics`
-- Week 4 slides: APIs and web scraping
-
-## Getting Help
-
-- **Office hours:** After class or by appointment
-- **Slack:** Post questions in #homework channel
-- **AI assistants:** Use for syntax and debugging
-- **Classmates:** Discuss approaches (but write your own code!)
-
----
-
-**Start early and scrape responsibly! 🎬**
